@@ -19,7 +19,7 @@ int test2(){
     counter += 1;
   }
 
-  printf("Teste loop muitas iterações\n", );
+  printf("Teste loop muitas iterações\n");
   print_cmd();
   return 0;
 }
