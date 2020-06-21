@@ -17,7 +17,6 @@ int main(int argc, char *argv[]) {
         filho = fork();
         if (filho == 0) {
           if (all_tests[i].function() >= 0) {
-              pass_count++;
               printf("%s: [PASS]\n", all_tests[i].name);
           };
           break;
@@ -28,6 +27,8 @@ int main(int argc, char *argv[]) {
 
                 printf("\n%d/%d tests passed\n", pass_count, size);
                 printf("\n=====================\n");
+
+                pass_count++;
             }
           }
         }
