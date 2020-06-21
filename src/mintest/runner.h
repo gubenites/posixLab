@@ -21,6 +21,8 @@ int main(int argc, char *argv[]) {
               printf("%d\n", contador_pass);
               printf("%s: [PASS]\n", all_tests[i].name);
 
+              printf("\n%d/%d tests passed\n", contador_pass, size);
+              printf("\n=====================\n");
           };
           break;
         } else{
@@ -28,10 +30,6 @@ int main(int argc, char *argv[]) {
             if (WIFSIGNALED(wt)) {
                 printf("[ERROR]: %s\n",strsignal(WTERMSIG(wt)));
             }
-            printf("\n%d/%d tests passed\n", contador_pass, size);
-            printf("\n=====================\n");
-
-
           }
         }
 
