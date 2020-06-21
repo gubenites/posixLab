@@ -22,14 +22,12 @@ int main(int argc, char *argv[]) {
             pass_count++;
         };
       } else{
-        wait(&wt);
-
-        if (WIFEXITED(wt)) {
-            printf("Filhou acabou: %d\n",(char) WEXITSTATUS(wt));
+        if (wait(&wt) >= 0) {
+          if (WIFEXITED(wt)) {
+              printf("Filhou acabou: %d\n",(char) WEXITSTATUS(wt));
+          }
         }
-
       }
-
     }
 
     printf("\n\n=====================\n");

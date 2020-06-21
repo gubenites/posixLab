@@ -8,14 +8,6 @@ int test1(){
   return 0;
 }
 
-int test3(){
-  int counter = 0;
-  for(int i = 0; i < 200000 ; i++){
-    counter += 1;
-  }
-  return 0;
-}
-
 int test2(){
   int counter = 0;
 
@@ -24,6 +16,14 @@ int test2(){
   }
 
   printf("ERRO, LOOP INFINITO\n");
+  return 0;
+}
+
+int test3(){
+  int counter = 0;
+  for(int i = 0; i < 200000 ; i++){
+    counter += 1;
+  }
   return 0;
 }
 
