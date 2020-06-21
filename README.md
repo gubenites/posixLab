@@ -1,6 +1,5 @@
 # posixLab
-#GUSTA MOLINA
+GUSTAVO MOLINA
+REQUISITOS PARA: C
 
-#REQUISITOS PARA: C
-
-implementado : 
+implementado :

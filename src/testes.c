@@ -30,7 +30,7 @@ int test3(){
 
 int test4(){
   test_assert(4 == 4, "Esse teste ira passar\n");
-  test_assert(4 != 1 , "Esse teste não ira passar\n");
+  test_assert(1 != 1 , "Esse teste não ira passar\n");
 
   return 0;
 }
