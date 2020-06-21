@@ -46,8 +46,6 @@ int main(int argc, char *argv[]) {
           if (filho == 0) {
             if (all_tests[i].function() >= 0) {
               printf("%s: [PASS]\n", all_tests[i].name);
-            }else{
-              printf("%s: [ERROR]\n", all_tests[i].name);
             }
             break;
           } else{
@@ -55,12 +53,12 @@ int main(int argc, char *argv[]) {
               if (WIFEXITED(wt)) {
                   printf("Filhou acabou: %d\n",(char) WEXITSTATUS(wt));
                   pass_count++;
+
+                  printf("%d/%d tests passed\n", pass_count, 1);
+                  printf("\n\n=====================\n");
               }
             }
           }
-
-          printf("\n\n=====================\n");
-          printf("%d/%d tests passed\n", pass_count, 1);
         }
       }
     }
