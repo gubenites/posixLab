@@ -8,7 +8,7 @@ int test1(){
 int test2(){
   int counter = 0;
 
-  while(){
+  while(1){
     counter += 1;
   }
 
