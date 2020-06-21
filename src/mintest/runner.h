@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
         filho = fork();
         if (filho == 0) {
           if (all_tests[i].function() >= 0) {
-              printf("%s: [PASS]\n", all_tests[i].name);
+              printf("\n%s: [PASS]\n", all_tests[i].name);
               printf("\n%d/%d tests passed\n", contador_pass, size);
               printf("\n=====================\n");
           };
