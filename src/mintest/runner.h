@@ -27,9 +27,10 @@ int main(int argc, char *argv[]) {
           }
         }
       }
-    }
 
-    printf("\n\n=====================\n");
-    printf("%d/%d tests passed\n", pass_count, size);
+      printf("\n\n=====================\n");
+      printf("%d/%d tests passed\n", pass_count, size);
+    }
+    
     return 0;
 }
