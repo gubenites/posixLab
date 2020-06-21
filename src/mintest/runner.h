@@ -6,8 +6,11 @@
 
 int main(int argc, char *argv[]) {
     int size = sizeof(all_tests)/sizeof(test_data);
+    pid_t filho,pai;
+
     printf("Number of tests to be executed: %d\n", size);
     printf("=====================\n\n");
+    printf("%s\n",all_tests[1]);
     int pass_count = 0;
     for (int i = 0; i < size; i++) {
       printf("LOOP: %d\n", i);
