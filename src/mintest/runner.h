@@ -4,7 +4,7 @@
 #include <unistd.h>
 #include <string.h>
 
-int main() {
+int main(int argc, char *argv[]) {
     int size = sizeof(all_tests)/sizeof(test_data);
     printf("Running %d tests:\n", size);
     printf("=====================\n\n");
