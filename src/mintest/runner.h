@@ -51,7 +51,7 @@ int main(int argc, char *argv[]) {
           } else{
             if (wait(&wt) >= 0) {
               if (WIFEXITED(wt)) {
-                  printf("Filhou acabou: %d\n",(char) WEXITSTATUS(wt));
+                  printf("Filho acabou: %d\n",(char) WEXITSTATUS(wt));
                   pass_count++;
 
                   printf("%d/%d tests passed\n", pass_count, 1);
