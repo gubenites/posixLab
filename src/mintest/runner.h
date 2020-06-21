@@ -38,9 +38,12 @@ int main(int argc, char *argv[]) {
           }
         }
         if(i == size - 1){
+          int var1 = contador_pass - 1;
+          int var2 = size - var1 - contador_error;
           printf("\n=====================\n");
-          printf("\n%d/%d Total tests passed\n", contador_pass - 1, size);
-          printf("%d/%d Total tests error", contador_error - 1, size);
+          printf("\n%d/%d Total tests passed\n", var1, size);
+          printf("%d/%d Total tests error", contador_error, size);
+          printf("%d/%d Total tests fail", var2 , size);
           printf("\n=====================\n");
 
         }
