@@ -14,10 +14,12 @@ A seguinte implementação segue a estrutura de tres arquivos principais: \
   -macros.h \
 
   1.Runner.h: \
+
     Consiste no arquivo em que foi feita grande maioria das alterações, o mesmo pode ser separado em 2 partes, uma em que argc == 0 e a outra em que agrc > 1. Analisando a parte em que argc == 0 temos uma forma de rodar os testes feitos primeiramente em forma paralela, ao criar um fork, e gerenciar um wait, temos a necessidade do processo filho terminar e não rodar todos ao mesmo tempo. Enquanto quando argc >= 1, passamos via terminal o nome do teste a ser executado que é recebido como argv[2] o mesmo é iterado pelas funcoes do arquivo teste comparando string a string pelo comando strcmp de tal forma que ao encontrar o equivalente, somente aquele teste sera executado, cabe observar que no mesmo os testes não ocorrem de forma simultanea TAMBEM, dado que há a criação de processos filhos e chamadas de wait para que o processo acabe antes de avancar para o proximo. O fato pode ser observado como: \
     Primeiro é rodado test1, depois test 2, então test3 e assim por diante, se não houvesse a criação do fork(), os processos iriam acontecer simultaneamente ficando muito confuso para se ter uma analise mais detalhada e especifica a cerca dos teste. \
 
   2.Testes.c: \
+
     No arquivo testes.c temos a implementação dos testes que serão executados e transferidos para o runner.c, dados eles que são: \
     test1: Cause erro e termine com divisão por zero. \
     test2: Faça muito trabalho, mas eventualmente acabe (sem usar sleep ). \
