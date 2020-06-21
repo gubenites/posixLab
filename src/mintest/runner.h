@@ -36,7 +36,7 @@ int main(int argc, char *argv[]) {
           }
         }
         if(i == size - 1){
-          printf("\n=====================\n\n");
+          printf("\n=====================\n");
           printf("\n%d/%d Total tests passed\n", contador_pass - 1, size);
           printf("\n=====================\n");
 
