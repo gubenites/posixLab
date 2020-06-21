@@ -36,12 +36,13 @@ int main(int argc, char *argv[]) {
           }
         }
         if(i == size - 1){
+          printf("\n=====================\n\n");
           printf("\n%d/%d Total tests passed\n", contador_pass - 1, size);
           printf("\n=====================\n");
+
         }
       }
     } else if(argc > 1){
-
       printf("Number of tests to be executed: %d\n", 1);
       printf("=====================\n\n");
       int pass_count = 0;
