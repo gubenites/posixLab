@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
             if (WIFSIGNALED(wt)) {
                 printf("[ERROR]: %s\n",strsignal(WTERMSIG(wt)));
 
-                pass_count += WEXITSTATUS(status);
+                pass_count += WEXITSTATUS(wt);
             }
             printf("\n%d/%d tests passed\n", pass_count, size);
             printf("\n=====================\n");
