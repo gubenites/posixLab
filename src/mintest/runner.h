@@ -25,8 +25,9 @@ int main(int argc, char *argv[]) {
             if (WIFEXITED(wt)) {
                 printf("Filhou acabou: %d\n",(char) WEXITSTATUS(wt));
                 pass_count++;
-                printf("\n\n=====================\n");
+
                 printf("%d/%d tests passed\n", pass_count, size);
+                printf("\n\n=====================\n");
             }
           }
         }
