@@ -10,11 +10,10 @@ int test1(){
 
 int test2(){
   int counter = 0;
-  for(int i = 0; i <= 200000 ; i++){
+  for(int i = 0; i < 200000 ; i++){
     counter += 1;
   }
 
-  printf("%d\n", counter);
   test_assert(counter == 200000, "Teste loop muitas iterações\n");
   return 0;
 }
