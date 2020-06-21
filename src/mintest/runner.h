@@ -18,6 +18,7 @@ int main(int argc, char *argv[]) {
         if (filho == 0) {
           if (all_tests[i].function() >= 0) {
               contador_pass += 1;
+              printf("%d\n", contador_pass);
               printf("%s: [PASS]\n", all_tests[i].name);
 
           };
