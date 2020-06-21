@@ -32,7 +32,7 @@ int main(int argc, char *argv[]) {
         printf("\n\n=====================\n");
         printf("%d/%d tests passed\n", pass_count, size);
       }
-    } else if(argc == 1){
+    } else if(argc > 1){
 
       printf("Number of tests to be executed: %d\n", size);
       printf("=====================\n\n");
