@@ -30,7 +30,7 @@ int main(int argc, char *argv[]) {
                 pass_count += WEXITSTATUS(status);
             }
             printf("\n%d/%d tests passed\n", pass_count, size);
-            printf("\n=====================\n
+            printf("\n=====================\n")
 
 
           }
