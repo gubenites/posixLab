@@ -11,6 +11,7 @@ int main(int argc, char *argv[]) {
     int pass_count = 0;
     for (int i = 0; i < size; i++) {
       printf("LOOP: %d\n", i);
+      printf("TEST: %d\n", all_tests[i].function());
         if (all_tests[i].function() >= 0) {
             printf("TEST: %d\n", i + 1);
             printf("%s: [PASS]\n", all_tests[i].name);
