@@ -22,8 +22,8 @@ int main(int argc, char *argv[]) {
           break;
         } else{
           if (wait(&wt) >= 0) {
-            if (WIFEXITED(wt)) {
-                printf("Filhou acabou: %d\n",(char) WEXITSTATUS(wt));
+            if (WIFSIGNALED(wt)) {
+                printf("[ERROR]: %s\n",strsignal(WTERMSIG(status));
 
                 printf("\n%d/%d tests passed\n", pass_count, size);
                 printf("\n=====================\n");
