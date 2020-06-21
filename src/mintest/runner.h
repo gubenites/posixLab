@@ -34,7 +34,7 @@ int main(int argc, char *argv[]) {
       }
     } else if(argc > 1){
 
-      printf("Number of tests to be executed: %d\n", size);
+      printf("Number of tests to be executed: %d\n", 1);
       printf("=====================\n\n");
       int pass_count = 0;
 
@@ -56,7 +56,7 @@ int main(int argc, char *argv[]) {
           }
 
           printf("\n\n=====================\n");
-          printf("%d/%d tests passed\n", pass_count, size);
+          printf("%d/%d tests passed\n", pass_count, 1);
         }
       }
     }
