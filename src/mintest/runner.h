@@ -17,12 +17,12 @@ int main(int argc, char *argv[]) {
       int contador_error = 0;
 
       for (int i = 0; i < size; i++) {
-        contador_pass += 1;
         filho = fork();
         if (filho == 0) {
           if (all_tests[i].function() >= 0) {
+              contador_pass += 1
               printf("\n%s: [PASS]\n", all_tests[i].name);
-              printf("\n%d/%d tests passed\n", contador_pass, size);
+              printf("\n%d/%d tests passed\n", contador_pass, 1);
               printf("\n=====================\n");
           };
           break;
@@ -31,7 +31,6 @@ int main(int argc, char *argv[]) {
             if (WIFSIGNALED(wt)) {
                 printf("%s: [ERROR]: %s\n",all_tests[i].name, strsignal(WTERMSIG(wt)));
                 printf("\n=====================\n");
-                contador_pass -= 1;
                 contador_error += 1;
 
             }
