@@ -58,6 +58,6 @@ int test7(){
   return 0;
 }
 
-test_list = { TEST(test1), TEST(test2), TEST(test3), TEST(test4) , TEST(test5) , TEST(test6) };
+test_list = { TEST(test1), TEST(test2), TEST(test3), TEST(test4) , TEST(test5) , TEST(test6) , TEST(test7) };
 
 #include "mintest/runner.h"
