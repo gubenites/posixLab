@@ -5,7 +5,7 @@
 
 int test1(){
   test_assert(1%0, "Divisão por zero, não dara certo\n");
-  printf("PASSOU TESTE 1\n", );
+  printf("PASSOU TESTE 1\n");
   return 0;
 }
 
@@ -15,7 +15,7 @@ int test2(){
     counter += 1;
   }
 
-  printf("PASSOU TESTE 2\n", );
+  printf("PASSOU TESTE 2\n");
   return 0;
 }
 
