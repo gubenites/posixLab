@@ -1,4 +1,7 @@
 #include "mintest/macros.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
 
 int test1(){
   test_assert(1/0 == 1, "Divisão por zero, não dara certo\n");
