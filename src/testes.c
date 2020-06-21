@@ -9,7 +9,7 @@ int test1(){
 }
 
 int test2(){
-  counter = 0
+  counter = 0;
   for(int i = 0; i < 200000 ; i++){
     counter += 1;
   }
