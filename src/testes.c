@@ -6,7 +6,7 @@
 int test1(){
   test_assert(1/0 == 8, "Divisão por zero, não dara certo\n");
   test_printf("ERROR: DIVISÃO POR ZERO");
-  return -1;
+  return 0;
 }
 
 int test2(){
@@ -27,7 +27,7 @@ int test3(){
 
   printf("ERRO, LOOP INFINITO\n");
 
-  return -1;
+  return 0;
 }
 
 int test4(){
