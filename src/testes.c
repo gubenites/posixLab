@@ -3,24 +3,16 @@
 #include <stdio.h>
 #include <unistd.h>
 
-void print_cmd() {
-    printf("\033[0m");
-}
-
 int test1(){
   test_assert(1/0 == 8, "Divisão por zero, não dara certo\n");
-  print_cmd();
   return 0;
 }
 
 int test2(){
-  int counter = 0;
   for(int i = 0; i < 200000 ; i++){
-    counter += 1;
   }
 
   printf("Teste loop muitas iterações\n");
-  print_cmd();
   return 0;
 }
 
@@ -33,15 +25,13 @@ int test3(){
   }
 
   printf("ERRO, LOOP INFINITO\n");
-  print_cmd();
+  
   return 0;
 }
 
 int test4(){
   test_assert(4 == 4, "Esse teste ira passar\n");
-  print_cmd();
   test_assert(1 != 1 , "Esse teste não ira passar\n");
-  print_cmd();
 
   return 0;
 }
@@ -56,9 +46,8 @@ int test5(){
 
 int test6(){
   test_assert(1 == 1, "Teste rapido\n");
-  print_cmd();
   test_assert(2 * 2 != 6, "Teste lento\n");
-  print_cmd();
+
   return 0;
 }
 
