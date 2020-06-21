@@ -21,7 +21,6 @@ int main(int argc, char *argv[]) {
         if (filho == 0) {
           if (all_tests[i].function() >= 0) {
               printf("%s: [PASS]\n", all_tests[i].name);
-
               printf("\n%d/%d tests passed\n", contador_pass, size);
               printf("\n=====================\n");
           };
@@ -29,7 +28,7 @@ int main(int argc, char *argv[]) {
         } else{
           if (wait(&wt) >= 0) {
             if (WIFSIGNALED(wt)) {
-                printf("%s [ERROR]: %s\n",all_tests[i].name, trsignal(WTERMSIG(wt)));
+                printf("%s: [ERROR]: %s\n",all_tests[i].name, strsignal(WTERMSIG(wt)));
                 contador_pass -= 1;
             }
           }
