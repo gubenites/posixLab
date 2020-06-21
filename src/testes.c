@@ -14,6 +14,7 @@ int test2(){
     counter += 1;
   }
 
+  printf("%d\n", counter);
   test_assert(counter == 200000, "Teste loop muitas iterações\n");
   return 0;
 }
