@@ -18,6 +18,7 @@ int main(int argc, char *argv[]) {
         if (all_tests[i].function() >= 0) {
             printf("%s: [PASS]\n", all_tests[i].name);
         };
+        break;
       } else{
         if (wait(&wt) >= 0) {
           if (WIFEXITED(wt)) {
