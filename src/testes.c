@@ -47,7 +47,7 @@ int test5(){
 
 int test6(){
   test_assert(1 == 1, "Teste rapido\n");
-  test_assert(2 * 2 != 6, "Teste lento\n");
+  test_assert(2 * 3 != 6, "Teste lento\n");
 
   return 0;
 }
