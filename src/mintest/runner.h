@@ -23,11 +23,6 @@ int main(int argc, char *argv[]) {
               printf("\n%s: [PASS]\n", all_tests[i].name);
               printf("\n%d/%d tests passed\n", contador_pass, size);
               printf("\n=====================\n");
-
-              if(i == size - 1){
-                printf("\n%d/%d Total tests passed\n", contador_pass, size);
-                printf("\n=====================\n");
-              }
           };
           break;
         } else{
@@ -40,8 +35,10 @@ int main(int argc, char *argv[]) {
             }
           }
         }
-
-
+        if(i == size - 1){
+          printf("\n%d/%d Total tests passed\n", contador_pass, size);
+          printf("\n=====================\n");
+        }
       }
     } else if(argc > 1){
 
