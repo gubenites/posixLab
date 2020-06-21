@@ -50,6 +50,14 @@ int test6(){
   return 0;
 }
 
+int test7(){
+  char vectorX[12];
+
+  test_assert(vectorX[14] == 4, "SEGMENTION FAULT ERROR");
+
+  return 0;
+}
+
 test_list = { TEST(test1), TEST(test2), TEST(test3), TEST(test4) , TEST(test5) , TEST(test6) };
 
 #include "mintest/runner.h"
