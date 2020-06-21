@@ -26,8 +26,8 @@ int main(int argc, char *argv[]) {
                 printf("Filhou acabou: %d\n",(char) WEXITSTATUS(wt));
                 pass_count++;
 
-                printf("%d/%d tests passed\n", pass_count, size);
-                printf("\n\n=====================\n");
+                printf("\n%d/%d tests passed\n", pass_count, size);
+                printf("\n=====================\n");
             }
           }
         }
