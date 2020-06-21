@@ -18,8 +18,8 @@ int main(int argc, char *argv[]) {
         if (filho == 0) {
           if (all_tests[i].function() >= 0) {
               printf("%s: [PASS]\n", all_tests[i].name);
-              pass_count++;
           };
+          pass_count++;
           break;
         } else{
           if (wait(&wt) >= 0) {
