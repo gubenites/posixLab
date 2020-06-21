@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
         } else{
           if (wait(&wt) >= 0) {
             if (WIFSIGNALED(wt)) {
-                printf("[ERROR]: %s\n",strsignal(WTERMSIG(status));
+                printf("[ERROR]: %s\n",strsignal(WTERMSIG(wt));
 
                 printf("\n%d/%d tests passed\n", pass_count, size);
                 printf("\n=====================\n");
