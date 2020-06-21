@@ -10,11 +10,10 @@ int main(int argc, char *argv[]) {
 
     printf("Number of tests to be executed: %d\n", size);
     printf("=====================\n\n");
-    printf("%c\n",all_tests[1]);
     int pass_count = 0;
     for (int i = 0; i < size; i++) {
       printf("LOOP: %d\n", i);
-      printf("TEST: %d\n", all_tests[i].function());
+      printf("TEST: %d\n", all_tests[i]);
         if (all_tests[i].function() >= 0) {
             printf("TEST: %d\n", i + 1);
             printf("%s: [PASS]\n", all_tests[i].name);
