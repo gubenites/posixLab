@@ -12,13 +12,18 @@ int main(int argc, char *argv[]) {
     printf("=====================\n\n");
     int pass_count = 0;
     for (int i = 0; i < size; i++) {
-      printf("LOOP: %d\n", i);
-      printf("TEST: %d\n", all_tests[i]);
+      filho = fork();
+      if (filho == 0) {
+        printf("LOOP: %d\n", i);
+        printf("TEST: %d\n", all_tests[i]);
+
         if (all_tests[i].function() >= 0) {
             printf("TEST: %d\n", i + 1);
             printf("%s: [PASS]\n", all_tests[i].name);
             pass_count++;
         };
+      }
+
     }
 
     printf("\n\n=====================\n");
