@@ -31,6 +31,11 @@ int main(int argc, char *argv[]) {
                 printf("%s: [ERROR]: %s\n",all_tests[i].name, strsignal(WTERMSIG(wt)));
                 printf("\n=====================\n");
                 contador_pass -= 1;
+
+                if(i == size - 1){
+                  printf("\n%d/%d Total tests passed\n", contador_pass, size);
+                  printf("\n=====================\n");
+                }
             }
           }
         }
