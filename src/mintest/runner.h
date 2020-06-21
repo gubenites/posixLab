@@ -18,6 +18,8 @@ int main(int argc, char *argv[]) {
         if (filho == 0) {
           if (all_tests[i].function() >= 0) {
               printf("%s: [PASS]\n", all_tests[i].name);
+
+              pass_count++;
           };
           break;
         } else{
@@ -25,11 +27,9 @@ int main(int argc, char *argv[]) {
             if (WIFSIGNALED(wt)) {
                 printf("[ERROR]: %s\n",strsignal(WTERMSIG(wt)));
 
-                printf("\n%d/%d tests passed\n", pass_count, size);
-                printf("\n=====================\n");
-
-                pass_count++;
             }
+            printf("\n%d/%d tests passed\n", pass_count, size);
+            printf("\n=====================\n");
           }
         }
 
