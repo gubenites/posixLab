@@ -1,4 +1,8 @@
-
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <string.h>
 
 int main() {
     int size = sizeof(all_tests)/sizeof(test_data);
@@ -11,7 +15,7 @@ int main() {
             pass_count++;
         };
     }
-    
+
     printf("\n\n=====================\n");
     printf("%d/%d tests passed\n", pass_count, size);
     return 0;
