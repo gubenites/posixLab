@@ -17,9 +17,9 @@ int main(int argc, char *argv[]) {
         filho = fork();
         if (filho == 0) {
           if (all_tests[i].function() >= 0) {
+              pass_count++;
               printf("%s: [PASS]\n", all_tests[i].name);
           };
-          pass_count++;
           break;
         } else{
           if (wait(&wt) >= 0) {
