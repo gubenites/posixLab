@@ -17,6 +17,7 @@ int test2(){
 }
 
 int test3(){
+  alarm(7);
   int counter = 0;
 
   while(1){
