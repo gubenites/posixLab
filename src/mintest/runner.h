@@ -7,6 +7,7 @@
 int main(int argc, char *argv[]) {
     int size = sizeof(all_tests)/sizeof(test_data);
     pid_t filho,pai;
+    int wt;
 
     printf("Number of tests to be executed: %d\n", size);
     printf("=====================\n\n");
@@ -15,21 +16,18 @@ int main(int argc, char *argv[]) {
       filho = fork();
       if (filho == 0) {
         printf("LOOP: %d\n", i);
-        printf("TEST: %d\n", all_tests[i]);
-
         if (all_tests[i].function() >= 0) {
             printf("TEST: %d\n", i + 1);
             printf("%s: [PASS]\n", all_tests[i].name);
             pass_count++;
         };
       } else{
-        int wt;
         wait(&wt);
 
         if (WIFEXITED(wt)) {
             printf("Filhou acabou: %d\n",(char) WEXITSTATUS(wt));
         }
-        
+
       }
 
     }
