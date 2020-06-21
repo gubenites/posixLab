@@ -6,12 +6,13 @@
 
 int main(int argc, char *argv[]) {
     int size = sizeof(all_tests)/sizeof(test_data);
-    printf(size);
+    printf("Number of tests to be executed: %d", size);
     printf("Running %d tests:\n", size);
     printf("=====================\n\n");
     int pass_count = 0;
     for (int i = 0; i < size; i++) {
         if (all_tests[i].function() >= 0) {
+            printf("TEST: %d\n", i + 1);
             printf("%s: [PASS]\n", all_tests[i].name);
             pass_count++;
         };
