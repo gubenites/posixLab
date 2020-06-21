@@ -20,7 +20,6 @@ int main(int argc, char *argv[]) {
         filho = fork();
         if (filho == 0) {
           if (all_tests[i].function() >= 0) {
-              printf("%d\n", contador_pass);
               printf("%s: [PASS]\n", all_tests[i].name);
 
               printf("\n%d/%d tests passed\n", contador_pass, size);
@@ -30,7 +29,7 @@ int main(int argc, char *argv[]) {
         } else{
           if (wait(&wt) >= 0) {
             if (WIFSIGNALED(wt)) {
-                printf("[ERROR]: %s\n",strsignal(WTERMSIG(wt)));
+                printf("%s [ERROR]: %s\n",all_tests[i].name, trsignal(WTERMSIG(wt)));
                 contador_pass -= 1;
             }
           }
