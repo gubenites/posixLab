@@ -4,8 +4,7 @@
 #include <unistd.h>
 
 int test1(){
-  test_assert(1/0 == 8, "Divisão por zero, não dara certo\n");
-  test_printf("ERROR: DIVISÃO POR ZERO");
+  test_assert(1/0, "Divisão por zero, não dara certo\n");
   return 0;
 }
 
@@ -47,7 +46,7 @@ int test5(){
 
 int test6(){
   test_assert(1 == 1, "Teste rapido\n");
-  test_assert(2 * 3 != 6, "Teste lento\n");
+  test_assert(2 * 3 == 6, "Teste lento\n");
 
   return 0;
 }
