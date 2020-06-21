@@ -16,10 +16,10 @@ int main(int argc, char *argv[]) {
       int contador_pass = 0;
 
       for (int i = 0; i < size; i++) {
+        contador_pass += 1;
         filho = fork();
         if (filho == 0) {
           if (all_tests[i].function() >= 0) {
-              contador_pass += 1;
               printf("%d\n", contador_pass);
               printf("%s: [PASS]\n", all_tests[i].name);
 
@@ -31,6 +31,7 @@ int main(int argc, char *argv[]) {
           if (wait(&wt) >= 0) {
             if (WIFSIGNALED(wt)) {
                 printf("[ERROR]: %s\n",strsignal(WTERMSIG(wt)));
+                contador_pass -= 1;
             }
           }
         }
