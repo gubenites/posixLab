@@ -42,8 +42,8 @@ int main(int argc, char *argv[]) {
           int var2 = size - var1 - contador_error;
           printf("\n=====================\n");
           printf("\n%d/%d Total tests passed\n", var1, size);
-          printf("%d/%d Total tests error", contador_error, size);
-          printf("%d/%d Total tests fail", var2 , size);
+          printf("%d/%d Total tests error\n", contador_error, size);
+          printf("%d/%d Total tests fail\n", var2 , size);
           printf("\n=====================\n");
 
         }
