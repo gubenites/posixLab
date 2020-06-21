@@ -5,6 +5,7 @@
 
 int test1(){
   test_assert(1%0, "Divisão por zero, não dara certo\n");
+  printf("PASSOU TESTE 1\n", );
   return 0;
 }
 
@@ -13,6 +14,8 @@ int test2(){
   for(int i = 0; i < 200000 ; i++){
     counter += 1;
   }
+
+  printf("PASSOU TESTE 2\n", );
   return 0;
 }
 

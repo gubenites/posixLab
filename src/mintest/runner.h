@@ -15,7 +15,6 @@ int main(int argc, char *argv[]) {
     for (int i = 0; i < size; i++) {
       filho = fork();
       if (filho == 0) {
-        printf("LOOP: %d\n", i);
         if (all_tests[i].function() >= 0) {
             printf("%s: [PASS]\n", all_tests[i].name);
             pass_count++;
