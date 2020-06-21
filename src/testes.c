@@ -4,7 +4,7 @@
 #include <unistd.h>
 
 int test1(){
-  test_assert(1%0, "Divisão por zero, não dara certo\n");
+  test_assert(1/0 == 8, "Divisão por zero, não dara certo\n");
   printf("PASSOU TESTE 1\n");
   return 0;
 }
