@@ -12,24 +12,22 @@ int main(int argc, char *argv[]) {
     if (argc == 1) {
       printf("Number of tests to be executed: %d\n", size);
       printf("=====================\n\n");
-      int pass_count = 0;
       for (int i = 0; i < size; i++) {
+        int contador_pass = 0;
         filho = fork();
         if (filho == 0) {
           if (all_tests[i].function() >= 0) {
+              contador_pass += 1;
               printf("%s: [PASS]\n", all_tests[i].name);
 
-              pass_count++;
           };
           break;
         } else{
           if (wait(&wt) >= 0) {
             if (WIFSIGNALED(wt)) {
                 printf("[ERROR]: %s\n",strsignal(WTERMSIG(wt)));
-
-                pass_count += WEXITSTATUS(wt);
             }
-            printf("\n%d/%d tests passed\n", pass_count, size);
+            printf("\n%d/%d tests passed\n", contador_pass, size);
             printf("\n=====================\n");
 
 
