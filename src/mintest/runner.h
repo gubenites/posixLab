@@ -22,6 +22,14 @@ int main(int argc, char *argv[]) {
             printf("%s: [PASS]\n", all_tests[i].name);
             pass_count++;
         };
+      } else{
+        int wt;
+        wait(&wt);
+
+        if (WIFEXITED(wt)) {
+            printf("Filhou acabou: %d\n",(char) WEXITSTATUS(wt));
+        }
+        
       }
 
     }
