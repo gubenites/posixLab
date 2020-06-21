@@ -36,15 +36,15 @@ int test4(){
 
 int test5(){
   for(int i = 0 ; i < 50 ; i++){
-    printf("Numero de prints %d,IGOR", i);
+    printf("Numero de prints %d,IGOR\n", i);
   }
 
   return 0;
 }
 
 int test6(){
-  test_assert(1 == 1, "Teste rapido");
-  test_assert(2 != 6, "Teste lento");
+  test_assert(1 == 1, "Teste rapido\n");
+  test_assert(2 != 6, "Teste lento\n");
 
   return 0;
 }

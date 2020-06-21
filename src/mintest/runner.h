@@ -6,6 +6,7 @@
 
 int main(int argc, char *argv[]) {
     int size = sizeof(all_tests)/sizeof(test_data);
+    printf(size);
     printf("Running %d tests:\n", size);
     printf("=====================\n\n");
     int pass_count = 0;
