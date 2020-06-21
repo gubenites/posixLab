@@ -29,6 +29,7 @@ int main(int argc, char *argv[]) {
           if (wait(&wt) >= 0) {
             if (WIFSIGNALED(wt)) {
                 printf("%s: [ERROR]: %s\n",all_tests[i].name, strsignal(WTERMSIG(wt)));
+                printf("\n=====================\n");
                 contador_pass -= 1;
             }
           }
